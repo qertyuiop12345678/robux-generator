@@ -1,0 +1,68 @@
+.robux-generator {
+  font-family: 'Courier New', Courier, monospace;
+  left: 50%;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.robux-generator button {
+  background-color: #0033cc;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 32px;
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.robux-generator button:disabled {
+  background-color: #333;
+  cursor: not-allowed;
+}
+
+.robux-generator > .robux-code {
+  display: flex;
+  font-size: 64px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+img.copy {
+  width: 20px;
+  height: 20px;
+}
+
+.robux-generator > .robux-code .code-digit-success {
+  color: #4bb543;
+}
+
+.robux-generator > .robux-code .code-digit-pending {
+  color: #ff0000;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltip-text {
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+}
