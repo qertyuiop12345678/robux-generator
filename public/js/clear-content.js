@@ -1,4 +1,4 @@
-function clearContent(element) {
+function clearContent (element) {
   element.innerText = '';
 }
 

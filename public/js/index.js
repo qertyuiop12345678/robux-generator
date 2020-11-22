@@ -17,7 +17,7 @@ let randomString;
 let generateCodeIntervalId;
 let chooseCodeCharIntervalId;
 
-function generateCode() {
+function generateCode () {
   clearContent(robuxCodePartOne);
   clearContent(robuxCodePartTwo);
   clearContent(robuxCodePartThree);
@@ -54,7 +54,7 @@ function generateCode() {
   });
 }
 
-function chooseCodeChar() {
+function chooseCodeChar () {
   const nextIndex = code.length;
   code.push(randomString.substring(nextIndex, nextIndex + 1));
 }

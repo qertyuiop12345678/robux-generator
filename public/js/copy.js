@@ -1,6 +1,6 @@
 import { tooltipText, robuxCode } from './selectors.js';
 
-function copyCode() {
+function copyCode () {
   const value = robuxCode.innerText.split('\n').join('');
 
   const element = document.createElement('textarea');
