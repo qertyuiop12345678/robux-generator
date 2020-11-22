@@ -5,5 +5,4 @@ function generateSpan ({ className, value }) {
   return span;
 }
 
-
 export { generateSpan };
