@@ -1,16 +1,16 @@
+import { clearContent } from './clear-content.js';
 import { copyCode } from './copy.js';
-import { generateSpan } from './generate-span.js';
 import { generateRandomString } from './generate-random-string.js';
+import { generateSpan } from './generate-span.js';
 import {
   copyIcon,
-  robuxGeneratorButton,
-  robuxCodePartOne,
-  robuxCodePartTwo,
-  robuxCodePartThree,
-  successMessage,
   pendingMessage,
+  robuxCodePartOne,
+  robuxCodePartThree,
+  robuxCodePartTwo,
+  robuxGeneratorButton,
+  successMessage,
 } from './selectors.js';
-import { clearContent } from './clear-content.js';
 
 let code = [];
 let randomString;
@@ -26,18 +26,19 @@ function generateCode() {
     return generateSpan({ className: 'code-digit-success', value: codeChar });
   });
 
-  const numNodes = nodes.length;
-
-  if (numNodes !== 10) {
+  if (nodes.length !== 10) {
     randomString = generateRandomString();
-    while (numNodes < 10) {
+    while (nodes.length < 10) {
+      const numNodes = nodes.length;
       const value = randomString.slice(numNodes, numNodes + 1);
       nodes.push(generateSpan({ className: 'code-digit-pending', value }));
     }
   } else {
     clearInterval(generateCodeIntervalId);
     clearInterval(chooseCodeCharIntervalId);
+
     robuxGeneratorButton.disabled = false;
+
     successMessage.classList.remove('hidden');
     pendingMessage.classList.add('hidden');
   }
